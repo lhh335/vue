@@ -5,7 +5,6 @@ import Index from '@/components/Index'
 import Page from '@/components/Page'
 
 Vue.use(Router)
-console.log(Page, 'page')
 export default new Router({
   routes: [
     {
@@ -17,7 +16,7 @@ export default new Router({
       name: 'Index',
       component: Index
     }, {
-      path: '／page',
+      path: '/page',
       name: 'Page',
       component: Page
     }

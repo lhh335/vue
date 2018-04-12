@@ -1,6 +1,7 @@
 <template>
   <div class='hello'>
-  {{message}}
+  {{this.message?'true':'false'}}
+  <button v-on:click='changeMessage'>点击改变</button>
   </div>
 </template>
 
@@ -9,12 +10,12 @@ export default {
   name: 'Page',
   data () {
     return {
-      message: 'this is page1'
+      message: false
     }
   },
   methods: {
     changeMessage: function () {
-      this.message = 'this is page1 change'
+      this.message = !this.message
     }
   }
 }
