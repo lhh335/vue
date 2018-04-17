@@ -2,9 +2,10 @@
   <div class="hello">
   {{myIndex}}
   <router-link to="/index/index1">index1</router-link>
-  <router-link to="/index/index2">index2</router-link>
-  <router-link to="/index/index3">index3</router-link>
+  <router-link to="/index/indexView">indexView</router-link>
   <router-view/>
+  <router-view name='view2'/>
+  <router-view name='view3'/>
   </div>
 </template>
 

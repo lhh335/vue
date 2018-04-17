@@ -25,14 +25,11 @@ export default new Router({
           component: Index1
         },
         {
-          path: 'index2',
-          name: 'Index2',
-          component: Index2
-        },
-        {
-          path: 'index3',
-          name: 'Index3',
-          component: Index3
+          path: 'indexView',
+          components: {
+            view2: Index2,
+            view3: Index3
+          }
         }
       ]
     }, {
