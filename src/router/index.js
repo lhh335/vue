@@ -38,6 +38,11 @@ export default new Router({
       component: Page,
       alias: '/a'
     }, {
+      path: '/page/:ids',
+      name: 'Page',
+      component: Page,
+      props: true
+    }, {
       path: '/redirect',
       redirect: '/index'
     }, {
