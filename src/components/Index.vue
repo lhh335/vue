@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
   {{myIndex}}
+  <router-link to="/index/index1">index1</router-link>
+  <router-link to="/index/index2">index2</router-link>
+  <router-link to="/index/index3">index3</router-link>
+  <router-view/>
   </div>
 </template>
 
@@ -10,6 +14,11 @@ export default {
   data () {
     return {
       myIndex: 'this is my practice'
+    }
+  },
+  computed: {
+    username () {
+      return this.$route.params
     }
   }
 }

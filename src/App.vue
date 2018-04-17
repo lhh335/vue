@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <p>
+    <router-link to="/">首页</router-link>
+    <router-link to="/index">index</router-link>
+    <router-link to="/page">page</router-link>
+  </p>
     <router-view/>
   </div>
 </template>
