@@ -35,10 +35,14 @@ export default new Router({
     }, {
       path: '/page',
       name: 'Page',
-      component: Page
+      component: Page,
+      alias: '/a'
     }, {
       path: '/redirect',
       redirect: '/index'
+    }, {
+      path: 'redirect1',
+      redirect: {name: 'Page'}
     }
   ]
 })
