@@ -36,6 +36,9 @@ export default new Router({
       path: '/page',
       name: 'Page',
       component: Page
+    }, {
+      path: '/redirect',
+      redirect: '/index'
     }
   ]
 })
