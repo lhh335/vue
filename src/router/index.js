@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/components/Home'
 import Index from '@/components/Index'
 import Page from '@/components/Page'
 import Index1 from '@/components/subIndex/Index1'
@@ -8,12 +8,38 @@ import Index2 from '@/components/subIndex/Index2'
 import Index3 from '@/components/subIndex/Index3'
 
 Vue.use(Router)
+
+const page1 = {
+  template: `<p>这是模版1</p>`
+}
+
+const defaults = {
+  template: `<p>这是默认选项</p>`
+}
+
+const helper = {
+  template: `<p>这是helper选项</p>`
+}
+
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: Home,
+      children: [
+        {
+          path: 'page1',
+          component: page1
+        },
+        {
+          path: 'page2',
+          components: {
+            default: defaults,
+            helper
+          }
+        }
+      ]
     }, {
       path: '/index',
       name: 'Index',
